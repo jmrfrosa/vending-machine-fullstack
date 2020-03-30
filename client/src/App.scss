@@ -1,0 +1,55 @@
+@import "../node_modules/picnic/picnic.min.css";
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: .5em;
+  height: 50vh;
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    justify-content: space-evenly;
+  
+    .header {
+      font-size: larger;
+      font-weight: bold;
+    }
+  }
+}
+
+.restock-menu {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 75vw;
+
+  .restock-table {
+    margin: 1em;
+    font-size: .8em;
+    flex-grow: 1;
+
+    table {
+      table-layout: fixed ;
+      width: 100%;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: row;
+
+      :nth-child(even) {
+        margin-left: .5em;
+      }
+    }
+  }
+}
